@@ -99,3 +99,8 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#本地数据相关
+*.sqlite3
+*/migrations
+/.idea

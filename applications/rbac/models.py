@@ -52,6 +52,8 @@ class Permission(Base):
     code = Column(String(10))
     group_id = Column(Integer, ForeignKey('perm_group.id'))
 
+    self_ref = relationship('Permission', remote_side=[id])  # 自关联
+
     def __str__(self):
         return self.title
 
